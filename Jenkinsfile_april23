@@ -1,7 +1,7 @@
 node{
 	def mavenHome = tool name: 'maven3.9.1'
 	stage('1 codeclone'){
-	  sh "git clone https://github.com/fritzo21/tesla-app"
+	 git 'https://github.com/fritzo21/tesla-app'
 	}
 	stage('2mavenBuild'){
        sh "${mavenHome}/bin/mvn package"
